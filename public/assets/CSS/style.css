@@ -1,0 +1,1325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+/*menu toddle span*/
+.nav-toggler.open span {
+    background-color: transparent;
+}
+.nav-toggler.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.nav-toggler.open span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/*section styling */
+.section {
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    opacity: 1;
+}
+.hidden
+{
+    display: none!important;
+}
+.main-container
+{
+    width: 100%;
+    height: 100%;
+}
+.main-content
+{
+    margin-left: 270px; /* This pushes content past the sidebar */
+    padding-left: 30px;     /* Standard spacing */
+    
+}
+.padd-15
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container 
+{
+    /*max-width: 1100px;*/
+    width:100% ;
+    margin: auto;
+}
+.section .container
+{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+.section-title
+{
+    flex: 0 0 100%;
+    max-width: 100%;  
+    margin-bottom: 60px;  
+}
+.section-title h2
+{
+    font-size: 40px;
+    color: var( --text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+.section-title h2::before
+{
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var( --skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.section-title h2::after
+{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var( --skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+.row 
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.btn
+{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--text-black-900);
+    border-radius: 4rem;
+    box-shadow: 0 0 25px var(--skin-color);
+    font-size: 1.1rem;
+    color: white;
+    letter-spacing: 0.1rem; 
+    font-weight: 600;
+    transition: 0.3s ease;
+    
+    margin-right: 20px;
+}
+.hire-me {
+    animation: floatImage 4s ease-in-out infinite;
+    background: var(--skin-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 25px var(--skin-color);
+    
+}
+.btn:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 0 1.6rem rgb(31, 4, 4);
+    font-size: 1.2rem;
+
+}
+@keyframes floatImage 
+{
+    0%{
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.shadow-dark
+{
+    box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
+}
+/* Aside styling */
+.aside {
+    width: 300px;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid var(--bg-black-50);
+    padding: 30px;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.aside .logo {
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: center;
+   margin-right: 15px;
+   margin-left: 15px;
+    
+}
+
+.aside .logo a {
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+  
+
+}
+
+.aside .logo a span 
+{
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+}
+
+.aside .logo a::before 
+{
+    content: '';
+    position: absolute; 
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+
+.aside .logo a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
+
+.aside .nav-toggler {
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.aside .nav-toggler span {
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+
+.aside .nav-toggler span::before {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.aside .nav-toggler span::after {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.aside .nav-toggler:hover {
+    background: rgb(172, 235, 135);
+}
+
+.aside .nav {
+    margin-top: 50px;
+}
+
+.aside .nav li {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aside .nav li a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 5px 15px;
+}
+
+.aside .nav li a:hover,
+.aside .nav li a.active {
+    color: var(--skin-color);
+}
+
+.aside .nav li a i {
+    margin-right: 15px;
+}
+/* home */
+.home
+{
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);   
+    
+}
+.home .home-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-bottom: 10%;
+    
+}
+.home-info h3.my-name
+{
+    font-size: 2rem;
+    
+}
+h3.hello
+{
+   font-size: 4rem;
+    margin: 15px 0; 
+}
+.home-info h3.my-name span
+{
+    font-family: 'Clicker Script' , cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var( --skin-color);
+}
+h3.my-profession
+{
+    font-size: 30px;
+    margin: 15px 0;
+}
+.typing
+{
+    color: var(--skin-color);
+}
+.home-info p
+{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var( --text-black-700);
+}
+.home .home-img
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+  
+    text-align: center;
+    position: relative;
+
+}
+.home .home-img img
+{
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgb(31, 4, 4);;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.home .home-img img:hover 
+{
+    box-shadow: 0 0 25px var(--skin-color),
+                0 0 35px var(--skin-color),
+                0 0 45px var(--skin-color);
+}
+/*about section styling */
+
+.about .about-content
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .about-text
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+
+}
+.about .about-content .about-text h3
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var( --text-black-900);
+    
+}
+.about .about-content .about-text h3 span
+{
+    color: var(--skin-color);
+}
+.about .about-content .about-text p
+{
+    font-size: 20px;
+    line-height: 25px;
+    color: var( --text-black-700);
+}
+.about .about-content .personal-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: auto;
+    
+}
+.about .about-content .personal-info .info-item
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+
+}
+.about .about-content .personal-info .info-item p
+{
+   font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var( --text-black-900);
+    border-bottom: 1px solid var( --bg-black-50);
+}
+.about .about-content .personal-info .info-item p span
+{
+    font-weight: 400;
+    color: var( -- text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+.about .about-content .personal-info .buttons
+{
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.about .about-content .skills
+{
+    flex: 0 0 40%;
+    max-width: 40%;    
+    margin-top: 40px;
+}
+.about .about-content .skills .skill-item
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+
+}
+.about .about-content .skills .skill-item h5
+{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var( --text-black-900);
+    text-transform: capitalize;
+}
+.about .about-content .skills .skill-item .progress
+{
+    background-color: var( --bg-black-50);
+    height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+.about .about-content .skills .skill-item .progress .progress-in
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var( --skin-color);
+}
+.about .about-content .skills .skill-item .progress .skill-percent
+{
+    position: absolute;
+    right: 0;
+    color: var( --text-black-900);
+    top: -40px;
+    font-weight: 400;
+    line-height: 40PX ;
+}
+.about .about-content .education,
+.about .about-content .experience
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+    
+
+}
+.about .about-content h3.title
+{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var( --text-black-900);
+}
+.about .about-content .timeline-box
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    
+}
+.about .about-content .timeline
+{
+    background-color: var( --bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var( --bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position:relative;    
+    
+} 
+.about .about-content .timeline .timeline-item
+{
+    position: relative;
+    padding-left: 37px ;
+    padding-bottom: 50px;
+    
+}
+.about .about-content .timeline .timeline-item:last-child
+{
+    padding-bottom: 0;
+}
+.about .about-content .timeline .timeline-item::before
+{
+    content: '';
+    width: 2px;
+    position: absolute;
+    height: 100%;
+    left: 10px;
+    top: 0;
+    background-color: var( --skin-color);
+}
+.about .about-content .timeline .circle-dot
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var( --skin-color);
+}
+.about .about-content .timeline .timeline-date
+{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var( --text-black-700);
+}
+.about .about-content .timeline .timeline-date i
+{
+    margin-right: 10px;
+}
+.about .about-content .timeline .timeline-title
+{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: var( --text-black-900);
+}
+.about .about-content .timeline .timeline-text
+{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    color: var( -- text-black-700);
+}
+/* services Section */
+/* SERVICES SECTION */
+.services-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* SERVICE BOX */
+.services-box {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    background: var(--bg-black-50);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid var(--bg-black-900);
+    transition: 0.3s ease;  
+
+}
+.services-box img 
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    }
+.services-box:hover {
+    transform: translateY(-8px);
+    border-color: var(--skin-color);
+    box-shadow:  0 0 25px var(--text-black-700);
+
+}
+
+/* TITLE */
+.services-box h3 {
+    font-size: 20px;
+    color: var(--text-black-900);
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.services-box p {
+    font-size: 14px;
+    color: var(--text-black-700);
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.services-box .btn1
+{
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgb(243, 131, 131);
+    border-radius: 4rem;
+    font-size: 1rem;
+    color:var(--text-black-900);
+    font-weight: 500;
+    
+    }
+.services-box .btn1:hover
+{
+    
+    box-shadow: 0 0 1.6rem rgb(31, 4, 4);
+
+}
+
+/*portfolio Section Styling*/
+
+.portfolio .container
+{
+    padding-bottom: 40px;
+}
+.portfolio .portfolio-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.portfolio .portfolio-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+.portfolio .portfolio-item
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;    
+}
+
+.portfolio .portfolio-item .portfolio-item-inner
+{
+    border: 6px solid var( --bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--text-black-700);
+    
+
+}
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-image {
+    height: 300px; /* Set a fixed height that looks good for your layout */
+    width: 100%;
+    overflow: hidden; /* Ensures nothing spills out */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    /* This ensures the center of the image is always visible */
+    object-position: center; 
+    display: block;
+    transition: transform 0.5s ease;
+    
+}
+
+/*contact section styling */
+.contact-title
+{
+    color: var( --skin-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.contact-sub-title
+{
+    color: var( --text-black-900);
+    text-align: center;
+    font-size: 15px;
+}
+.contact-form.padd-15 .row {
+    justify-content: center;
+}
+.contact-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--text-black-900);
+    width: 100%;
+    display: block; 
+}
+.contact-item i 
+{
+    margin-right: 10px;
+    color: var(--main-color);
+}
+.phone-number {
+    color: #007bff;
+    text-decoration: none;
+}
+.address {
+    margin: auto;
+    color: var(--text-color);  
+    display: flex;    
+}
+.address p
+{
+    margin-bottom: 10px;
+}
+.get-directions {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-style: italic;
+}
+.get-directions i {
+    margin-right: 5px;
+}
+.container .email {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    
+}
+.contact .container .row .btn
+{
+    margin: auto;
+    font-size: 1rem;
+    margin-top: 10%;
+    
+}
+.contact .container .row .btn:hover
+{
+    transform: none;
+    animation: none;
+}
+/* Contact Form  Styling */
+.contact .contact-form 
+{
+   flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;         /* Change from block to flex */
+    justify-content: center; /* This centers the child (the form) horizontally */ 
+}
+
+.contact .contact-form form {
+   max-width: 800px;/* Use px for more control than rem here */
+    
+    width: 100%;
+    margin: 30px 0;
+    padding: 40px;
+    text-align: left;
+    margin-top: 20px;
+
+    }
+
+.dbl-field .field i{
+    position: absolute;
+    left: 15px;           /* Fixed distance from the left edge */
+    top: 50%;             /* Center vertically */
+    transform: translateY(-50%); /* Precise vertical alignment */
+    font-size: 1.2rem;
+    color: rgb(192, 191, 191);
+    pointer-events: none;
+    z-index: 1;
+        }
+form .dbl-field{
+        
+        display: flex;
+        gap: 20px;            /* This provides the gap between the two inputs */
+        margin-bottom: 20px;
+        margin-top: 1rem;
+        
+        }
+
+.dbl-field .field{
+    flex: 1;
+    height: auto;
+   
+    position: relative;
+}
+form .field input
+     {
+        width: 100%;          /* Fill the container */
+        height: 50px;         /* Standardize height */
+        outline: none;
+        font-size: 1.1rem;
+        color: var(--text-black-900);
+        background: var(--bg-black-100);
+        border-radius: 0.5rem;
+        border: 0.15rem solid rgb(210, 208, 208);
+        margin: 0.7rem 0;
+        /* The important part: */
+        padding-left: 45px;   /* Creates the space for the icon */
+        padding-right: 15px;
+        }
+form .field input::placeholder,
+form .message textarea::placeholder{
+    color: grey;
+}
+form .message{
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* aligns icon to top of textarea */
+    gap: 1rem; /* space between icon and textarea */
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    margin-top: 1rem;
+    
+}
+
+
+form .message i
+{
+     position: absolute;
+        left:auto;
+        right: 95%;
+        font-size: 1rem;
+        top:10%;
+        color: rgb(192, 191, 191);
+        pointer-events: none;
+        transform: translate(-50%);
+}
+form .message textarea{
+    outline: none;
+    padding-left: 55px; /* Space for the icon */
+    font-size: 1rem;
+    color: var(--text-black-900);
+    background: var(--bg-black-100);
+    border-radius: 0.5rem;
+    border: 0.15rem solid rgb(210, 208, 208);
+    margin-top: 10px;
+    resize: both;
+    width: 100%;  /* Make it fill the form width */
+    height: 150px;  
+    margin-bottom: auto10px;
+    
+    }
+
+   
+
+.contact-form form .button-area {
+    display: flex;           /* Required for alignment properties to work */
+    justify-content: center;  /* Centers the button horizontally */
+    width: 100%;
+    
+}   
+.contact-form form .btn{
+    margin-top: 2rem;
+    margin-right: 0;
+    background-color: var(--text-black-700);
+    box-shadow: none;
+}
+.contact-form form .btn:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 0 1.6rem rgb(31, 4, 4);
+    font-size: 1.2rem;
+
+}
+/*footer section code */
+
+.footer {
+    position: relative;
+    
+    padding: 40px 0;
+    background-color: var(--bg-black-50);
+    margin-left: 270px; 
+    /* Ensure it doesn't push the page wider than the screen */
+    width: calc(100% - 270px);
+}
+
+
+.footer .social {
+
+text-align: center;
+padding-bottom: 25px;
+color: var(--text-black-700);
+}
+
+
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--text-black-700);
+    border: 2px solid var(--text-black-900);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px); 
+    background-color: var(--bg-black-900);
+    color: var(--skin-color);
+    box-shadow:  0 0 25px var(--text-black-700);
+    border: 2px solid var(--skin-color);
+
+}
+
+.footer .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-black-700);
+
+}
+/* RESPONSIVE */
+
+@media (max-width: 1199px) 
+{
+    .main-content {
+        margin-left: auto; /* Content fills screen since sidebar is hidden */
+        padding: 20px;
+    }
+
+    .section {
+        padding: 0 15px; /* Reduce padding on smaller screens */
+    }
+
+    .section-title h2 {
+        font-size: 32px; /* Smaller title for better fit */
+    }
+
+    .container {
+        max-width: 900px; /* Slightly narrower container */
+    }
+    .aside {
+        left: -300px;
+        transition: all 0.3s ease;
+    }
+
+    /* This class will be toggled via JavaScript to show the sidebar */
+    .aside.open {
+        left: 0;
+    }
+
+    /* Show the hamburger menu button */
+    .aside .nav-toggler {
+        display: flex;
+        left: 30px; /* Moves to the left edge of the screen */
+        transition: all 0.3s ease;
+    }
+
+    /* Move the toggler button when the menu is open */
+    .aside.open .nav-toggler {
+        left: 300px;
+    }
+
+    /* Optional: Adjust logo size for smaller screens */
+    .aside .logo a {
+        font-size: 25px;
+    }
+
+    .aside .logo a span {
+        font-size: 35px;
+    }
+    .home .row {
+        flex-direction: column-reverse; /* Put image on top of text */
+        align-items: center;
+    }
+
+    .home .home-info,
+    .home .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .home .home-img {
+        margin-bottom: 40px;
+    }
+
+    .home .home-img img {
+        width: 250px; /* Use a fixed size on mobile instead of 25vw */
+    }
+
+    .home-info p {
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+    .footer {
+        /* Remove the sidebar gap so the footer takes full width */
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+}
+
+@media (max-width: 991px) 
+{
+
+     .aside .nav li a
+    {
+        font-size: 16px;
+    }
+    /* Stack Personal Info and Skills vertically */
+    .about .about-content .personal-info,
+    .about .about-content .skills {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Stack Education and Experience vertically */
+    .about .about-content .education,
+    .about .about-content .experience {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-content .experience {
+        margin-top: 50px; /* Add space when Experience drops below Education */
+    }
+
+    .about .about-content .personal-info .buttons {
+        margin-top: 30px; /* Fix the large 20% margin for mobile */
+    }
+    .services-box {
+        /* Change from 3 columns to 2 columns */
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    
+    .portfolio .portfolio-item {
+        /* Switch from 3 columns to 2 columns */
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .contact-item {
+        font-size: 1.2rem; /* Slightly smaller text for tablets */
+        margin-bottom: 25px; /* More space between items */
+    }
+
+    .contact .container .row .btn {
+        margin-top: 30px; /* Replace the 10% margin with a fixed value */
+        width: 100%; /* Make the button easier to tap */
+        max-width: 250px;
+    }
+
+}
+@media (max-width: 767px)
+{
+    body 
+    {
+        font-size: 14px; /* Slightly smaller text for small screens */
+    }
+    .section .container {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+    .about .about-content .personal-info .button
+    {
+        flex-direction: column; /* Stacks the buttons vertically */
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 0.8rem 2.2rem;
+        font-size: 0.5rem;
+    }
+    .aside {
+        width: 270px; /* Slightly narrower sidebar on phones */
+        left: -270px;
+    }
+   
+
+    .aside.open .nav-toggler {
+        left: 270px;
+    }
+    h3.hello {
+        font-size: 24px;
+    }
+
+    h3.my-profession {
+        font-size: 22px;
+    }
+
+    .home .home-img img {
+        width: 200px; /* Even smaller for phones */
+    }
+
+    .home-info p {
+        font-size: 16px;
+    }
+    /* Stack Info Items (Age, Email, etc.) into one column */
+    .about .about-content .personal-info .info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-content .about-text h3 {
+        font-size: 20px;
+    }
+
+    .about .about-content .timeline .timeline-text {
+        text-align: left; /* Justified text often looks weird on very narrow screens */
+    }
+    
+  .services-content {
+    
+        /* Force boxes to stack vertically */
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-direction: column; /* This forces the vertical stack */
+        gap: 30px; /* Space between the stacked boxes */
+        width: 100%;
+        height: 100%;
+    
+    
+    }
+
+    .services-box {
+        /* Change to 1 column (Full Width) */
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 35px 20px; /* More vertical space for better mobile look */
+        width: 100%;
+        height: 100%;
+        
+        
+    }
+
+    .services-box img {
+        width: 80px; /* Slightly smaller icon for mobile screens */
+        height: 80px;
+    }
+
+    .services-box h3 {
+        font-size: 18px; /* Slightly smaller title */
+    }
+
+    .services-box p {
+        font-size: 13px; /* Smaller text for better readability on narrow screens */
+    }
+
+    .services-box .btn1 {
+        padding: 0.4rem 1.2rem; /* Slimmer button for mobile */
+        width: 100%; /* Optional: Makes the button full width of the box */
+        max-width: 200px;
+    }
+    .portfolio .portfolio-item {
+        /* Switch to 1 column (Full Width) */
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .portfolio .portfolio-item .portfolio-item-inner .portfolio-image {
+        /* Optional: Reduce height slightly on small phones so it fits the screen better */
+        height: 250px;
+    }
+
+    .portfolio .portfolio-heading h2 {
+        font-size: 22px; /* Scales down the heading for mobile */
+        text-align: center;
+    }
+    
+    .portfolio .container {
+        padding-bottom: 20px; /* Reduces extra white space */
+    }
+    .contact-title {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    .contact-sub-title {
+        font-size: 14px;
+        padding: 0 15px; /* Prevent text from hitting screen edges */
+    }
+
+    .contact-item {
+        font-size: 1.1rem;
+    }
+
+    /* Stack items inside address and email if they are flexed */
+    .address, .container .email {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address p, .container .email p {
+        margin-bottom: 5px;
+    }
+
+    .get-directions {
+        margin-right: 0;
+        margin-top: 5px;
+    }
+    .contact .contact-form form {
+        padding: 20px; /* Reduce padding so the form doesn't look squashed */
+        margin: 20px 0;
+    }
+
+    form .dbl-field {
+        flex-direction: column; /* Stacks the Name and Email fields vertically */
+        gap: 0; /* Remove the horizontal gap since they are now stacked */
+        margin-bottom: 0; 
+    }
+
+    .dbl-field .field {
+        width: 100%;
+    }
+
+    form .field input {
+        margin: 10px 0; /* Consistent spacing for stacked inputs */
+    }
+
+    form .message {
+        margin-top: 0;
+    }
+
+    form .message textarea {
+        height: 120px; /* Slightly shorter textarea for mobile screens */
+        padding-left: 45px; /* Adjusting icon padding to match inputs */
+    }
+
+    form .message i {
+        left: 25px; /* Fixing icon position for mobile */
+        top: 25px;
+    }
+
+    .contact-form form .btn {
+        width: 100%; /* Make button full width for easier tapping */
+        margin-top: 1.5rem;
+    }
+    .footer .social a {
+        /* Slightly smaller icons for small phones */
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    .footer .copyright {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 20px; /* Prevents text from touching screen edges */
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .contact .contact-form form {
+        padding: 15px;
+        border: none; /* Remove borders/extra styling if it feels too cramped */
+        width: 100%;
+    }
+}
+
+
